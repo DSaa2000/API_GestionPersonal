@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/GestionPersonalAPI/apis/GestionPersonalAPI",
+      "type": "apis.azure"
+    },
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/gestionpersonal/databases/GestionPersonalDB",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:SQLServerConnection",
+      "dynamicId": null
+    }
+  }
+}

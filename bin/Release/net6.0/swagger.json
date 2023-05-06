@@ -1,0 +1,1573 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Fuente/Create": {
+      "post": {
+        "tags": [
+          "Fuente"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/FuenteDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Fuente/Get": {
+      "get": {
+        "tags": [
+          "Fuente"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Fuente",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/FuenteDB"
+            }
+          }
+        }
+      }
+    },
+    "/api/Fuente/List": {
+      "get": {
+        "tags": [
+          "Fuente"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/FuenteDB"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Fuente/Edit": {
+      "put": {
+        "tags": [
+          "Fuente"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/FuenteDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Fuente/Delete": {
+      "delete": {
+        "tags": [
+          "Fuente"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Fuente",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Menu/Create": {
+      "post": {
+        "tags": [
+          "Menu"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ItemMenuDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Menu/Get": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_ItemMenu",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ItemMenuDB"
+            }
+          }
+        }
+      }
+    },
+    "/api/Menu/List": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Rol",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ItemMenu"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Menu/Listar_Items": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ItemMenu"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Menu/Listar_Modulos": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ItemMenu"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Menu/Edit": {
+      "put": {
+        "tags": [
+          "Menu"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ItemMenuDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Menu/Delete": {
+      "delete": {
+        "tags": [
+          "Menu"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_ItemMenu",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Mes/List": {
+      "get": {
+        "tags": [
+          "Mes"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MesDB"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Movimiento/Create": {
+      "post": {
+        "tags": [
+          "Movimiento"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/MovimientoDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Movimiento/Get": {
+      "get": {
+        "tags": [
+          "Movimiento"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Movimiento",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/MovimientoDB"
+            }
+          }
+        }
+      }
+    },
+    "/api/Movimiento/ListSP": {
+      "get": {
+        "tags": [
+          "Movimiento"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Movimiento"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Movimiento/List": {
+      "get": {
+        "tags": [
+          "Movimiento"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Movimiento"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Movimiento/Edit": {
+      "put": {
+        "tags": [
+          "Movimiento"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/MovimientoDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Movimiento/Delete": {
+      "delete": {
+        "tags": [
+          "Movimiento"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Movimiento",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Producto/Test": {
+      "post": {
+        "tags": [
+          "Producto"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Producto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Producto/Create": {
+      "post": {
+        "tags": [
+          "Producto"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Producto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Producto/Get": {
+      "get": {
+        "tags": [
+          "Producto"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Producto",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Producto"
+            }
+          }
+        }
+      }
+    },
+    "/api/Producto/List": {
+      "get": {
+        "tags": [
+          "Producto"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Producto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Producto/Edit": {
+      "put": {
+        "tags": [
+          "Producto"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Producto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Producto/Delete": {
+      "delete": {
+        "tags": [
+          "Producto"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Producto",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/RolUsuario/Create": {
+      "post": {
+        "tags": [
+          "RolUsuario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Rol"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/RolUsuario/Get": {
+      "get": {
+        "tags": [
+          "RolUsuario"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Rol",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RolDB"
+            }
+          }
+        }
+      }
+    },
+    "/api/RolUsuario/List": {
+      "get": {
+        "tags": [
+          "RolUsuario"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/RolDB"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RolUsuario/Listar_PermisosByRol": {
+      "get": {
+        "tags": [
+          "RolUsuario"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Rol",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Rol"
+            }
+          }
+        }
+      }
+    },
+    "/api/RolUsuario/Edit": {
+      "put": {
+        "tags": [
+          "RolUsuario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Rol"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/RolUsuario/Delete": {
+      "delete": {
+        "tags": [
+          "RolUsuario"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Rol",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoMovimiento/Create": {
+      "post": {
+        "tags": [
+          "TipoMovimiento"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TipoMovimientoDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoMovimiento/Get": {
+      "get": {
+        "tags": [
+          "TipoMovimiento"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_TipoMovimiento",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/TipoMovimientoDB"
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoMovimiento/List": {
+      "get": {
+        "tags": [
+          "TipoMovimiento"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TipoMovimientoDB"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoMovimiento/Edit": {
+      "put": {
+        "tags": [
+          "TipoMovimiento"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TipoMovimientoDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoMovimiento/Delete": {
+      "delete": {
+        "tags": [
+          "TipoMovimiento"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_TipoMovimiento",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Usuario/Create": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UsuarioDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Usuario/Create_Perfil": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/NuevoPerfil"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Usuario/Get": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Usuario",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UsuarioDB"
+            }
+          }
+        }
+      }
+    },
+    "/api/Usuario/List": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UsuarioDB"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Usuario/ListSP": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Usuario"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Usuario/Edit": {
+      "put": {
+        "tags": [
+          "Usuario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Usuario"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Usuario/Delete": {
+      "delete": {
+        "tags": [
+          "Usuario"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ID_Usuario",
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    },
+    "/api/Usuario/Login": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UsuarioDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Respuesta"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "FuenteDB": {
+      "type": "object",
+      "properties": {
+        "iD_Fuente": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        }
+      }
+    },
+    "ItemMenu": {
+      "type": "object",
+      "properties": {
+        "iD_ItemMenu": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "iD_ItemPadre": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "label": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ItemMenu"
+          }
+        },
+        "prioridad": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "permiso": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ItemMenuDB": {
+      "type": "object",
+      "properties": {
+        "iD_ItemMenu": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "iD_ItemPadre": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "titulo": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "prioridad": {
+          "format": "int64",
+          "type": "integer"
+        }
+      }
+    },
+    "MesDB": {
+      "type": "object",
+      "properties": {
+        "iD_Mes": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        }
+      }
+    },
+    "Movimiento": {
+      "type": "object",
+      "properties": {
+        "movimientoDB": {
+          "$ref": "#/definitions/MovimientoDB"
+        },
+        "fuente": {
+          "$ref": "#/definitions/FuenteDB"
+        },
+        "tipoMovimiento": {
+          "$ref": "#/definitions/TipoMovimientoDB"
+        }
+      }
+    },
+    "MovimientoDB": {
+      "type": "object",
+      "properties": {
+        "iD_Movimiento": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "iD_Fuente": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "iD_TipoMovimiento": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "fecha": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "motivo": {
+          "type": "string"
+        },
+        "monto": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "NuevoPerfil": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "iD_Rol": {
+          "format": "int64",
+          "type": "integer"
+        }
+      }
+    },
+    "PermisoAcceso": {
+      "type": "object",
+      "properties": {
+        "iD_ItemMenu": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "iD_ItemPadre": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "permiso": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Producto": {
+      "type": "object",
+      "properties": {
+        "iD_Producto": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        }
+      }
+    },
+    "Respuesta": {
+      "type": "object",
+      "properties": {
+        "codigo": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "mensaje": {
+          "type": "string"
+        },
+        "status": {
+          "type": "boolean"
+        },
+        "item": { }
+      }
+    },
+    "Rol": {
+      "type": "object",
+      "properties": {
+        "rolUsuario": {
+          "$ref": "#/definitions/RolDB"
+        },
+        "permisos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PermisoAcceso"
+          }
+        }
+      }
+    },
+    "RolDB": {
+      "type": "object",
+      "properties": {
+        "iD_Rol": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        }
+      }
+    },
+    "TipoMovimientoDB": {
+      "type": "object",
+      "properties": {
+        "iD_TipoMovimiento": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        }
+      }
+    },
+    "Usuario": {
+      "type": "object",
+      "properties": {
+        "iD_Usuario": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "correo": {
+          "type": "string"
+        },
+        "iD_Rol": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "rol": {
+          "$ref": "#/definitions/RolDB"
+        }
+      }
+    },
+    "UsuarioDB": {
+      "type": "object",
+      "properties": {
+        "iD_Usuario": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "correo": {
+          "type": "string"
+        },
+        "iD_Rol": {
+          "format": "int64",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

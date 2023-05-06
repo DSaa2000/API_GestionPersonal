@@ -26,10 +26,16 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: "AllowOrigin",
         builder =>
         {
-            builder.WithOrigins("https://http://192.168.100.44:8081", "http://localhost:8081", "http://localhost:8080")
+            builder.WithOrigins().AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+        });
+        /*builder =>
+        {
+            builder.WithOrigins(
+                "http://192.168.100.44:8081", "https://192.168.56.1", "http://192.168.56.1", "http://167.250.54.76", "https://167.250.54.76",
+                "http://localhost:8080", "http://localhost:8081")
                                 .AllowAnyHeader()
                                 .AllowAnyMethod();
-        });
+        });*/
 });
 var app = builder.Build();
 

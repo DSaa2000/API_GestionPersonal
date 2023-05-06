@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Controller_SelectedScaffolderID>ApiControllerEmptyScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/Api</Controller_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>C:\Users\SaaSan\Desktop\Desarrollo\Proyectos Personales\GestionPersonal\API\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\SaaSan\Desktop\Desarrollo Web\Plantilla Vue\Proyecto_GestionPersonal_API-main\Proyecto_GestionPersonal_API-main\Properties\PublishProfiles\GestionPersonalAPI - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
   </PropertyGroup>
 </Project>
