@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="GestionPersonalAPI" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="GestionPersonal1" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\SaaSan\\Desktop\\Desarrollo\ Web\\Plantilla\ Vue\\Proyecto_GestionPersonal_API-main\\Proyecto_GestionPersonal_API-main\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>
